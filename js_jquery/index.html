@@ -14,13 +14,13 @@
             //Here are some examples using jQuery
             //.addClass is used to add a class to any element
             //here we are targeting the div1 element
-            $("#div1").addClass("red"); //change the word red to pink *note these classes have already been created in the CSS file
+            $("#div1").addClass("pink"); //change the word red to pink *note these classes have already been created in the CSS file
 
             //.click is like using the onclick attribute we used before
             //It creates an event handler for when div1 is clicked
             $("#div1").click(function(){
-                console.log("You clicked div 1, It is red"); //Fix the output to reflect div1's new color
-
+                console.log("You clicked div 1, It is pink"); //Fix the output to reflect div1's new color
+                $('#div1').html('Click Counts ' + count++)
             });
 
             //Here is another .click example that changes the color of the div every time you click on it
@@ -31,15 +31,23 @@
                 if($("#div2").hasClass("green")){
                     //If it has the class "green" then it will output "I am Green!"
                     console.log("I am Green!");
+                    $('#div2').html('I am color green')
                 }else{
                     //else it does not have the class "green" then it will output "I am White!"
                     console.log("I am White!");
+                    $('#div2').html('I am color white')
                 }
             });
             //----Write your code bellow----//
+            $('#div2').addClass('card-back');
 
+            $('#div3').click(function() {
+                $('#div3').toggleClass('flag')
+            });
 
-
+            $('#div4').click(function(){
+                $('#div4').toggleClass('path')
+            });
             //----Write your code above----//
         });
     </script>
