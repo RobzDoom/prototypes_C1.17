@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_Repeat_Blocks</title>
+        <script>
+            var numbers = [1,2,3,4,5,6,7,8,9,10];
+            var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
+            var classRoom = {desk1: 'Stu', desk2: 'Peggy', desk3: 'LoneStar', desk4: 'George', desk5: 'Sheldon'};
+            var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {name: "George", grade: 93}, {name: "Robert", grade: 85}];
+
+            for (var i = 0; i <= numbers.length; i++){
+                    console.log(i);
+                }
+            for (var i = numbers.length; i >= 0; i--){
+                    console.log(i);
+                }
+
+            for (var i = 1; i <= numbers.length; i+=2){
+                    console.log(i)
+                }
+
+            for (var i = 1; i <= mixedArray.length; i++){
+                    if (mixedArray[i] % 2 === 1){
+                console.log(mixedArray[i])
+                    }
+            }
+
+            for (var key in classRoom){
+                    console.log(classRoom[key] + " is at " + key)
+            }
+
+            function findingStudent(studentName) {
+                for (var i = 0; i < studentArray.length; i++){
+
+                    if (studentName === studentArray[i].name){
+                      var theStudent = console.log('Found ' + studentArray[i].name + ' their grade is:' + studentArray[i].grade)
+                        return theStudent;
+                    }
+                }console.log('student ' + studentName + ' is not here')
+            }
+
+            findingStudent('Bob');
+        </script>
+</head>
+<body>
+
+</body>
+</html>

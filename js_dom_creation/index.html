@@ -36,15 +36,58 @@
             font-style: italic;
             font-size: 120%;
         }
+        .bold_text{
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 120%;
+        }
+
     </style>
 
     <script>
         $(document).ready(function () {
             //playground 1 code
+            var the_h1 = $('<h1>').text('I am heading');
+            var p_1 =  $('<p>').text('This is an awesome paragraph');
+            var p_2 =  $('<p>').css("color", "red").text('This is red text');
+
+            $(the_h1).appendTo('#playground1');
+            $(p_1).appendTo('#playground1');
+            $(p_2).appendTo('#playground1');
 
             //playground 2 code
+            var divOne = $('<div>').text('Here is some awesome div text').addClass('awesome_class');
+            var divTwo = $('<div>').text('Here is MORE awesome div text').addClass('awesome_class');
+            var divThree = $('<div>').text('Here is EVEN MORE awesome div text').addClass('awesome_class');
+
+            $(divOne).appendTo('#playground2');
+            $(divTwo).appendTo('#playground2');
+            $(divThree).appendTo('#playground2');
 
             //playground 3 code
+            var aUl = $('<ul>').addClass('neato');
+            var li1 = $('<li>').text('Link 1');
+            var li2 = $('<li>').text('Link 2');
+            var li3 = $('<li>').text('Link 3');
+
+            var add_img = $('<img>').attr('src',"http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg")
+            var youAre =  $('<figcation>').text("That's right, you are").addClass('bold_text');
+            var figureOne = $('<figure>').addClass('awesome_picture');
+
+            $(aUl).appendTo('#playground3');
+            $(li1).appendTo(aUl);
+            $(li2).appendTo(aUl);
+            $(li3).appendTo(aUl);
+            $(li3).appendTo('#playgound3');
+
+            add_img.appendTo(figureOne);
+            youAre.appendTo(figureOne);
+
+
+            figureOne.appendTo('#playground3')
+
+
         });
     </script>
 </head>
@@ -61,6 +104,7 @@
     <!-- ********** Playground 1 Destination ********** -->
     <div class="playground playground_destination" id="playground1">
         <!--copy code into here using jQuery ONLY-->
+
         <!-- ******** NO COPY AND PASTE ******** -->
     </div>
 
