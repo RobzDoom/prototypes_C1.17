@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_ref_data_types</title>
+    <script>
+        var studentArray = ['Nelson', 'Lisa', 'Bart', 'Millhouse', 'Ralph'];
+            console.log(studentArray[2]); //Should be Bart
+            console.log(studentArray.length);
+        studentArray.push('Martin', 'Todd');
+            console.log(studentArray.length);
+            console.log(studentArray);
+        var student = {
+
+        };
+        student.firstName = 'Nelson';
+        student.lastName = 'Muntz';
+        student.age = 10;
+        student.school = 'Springfield Middle School';
+        student.questionList = [];
+        student.hasQuestion = false;
+        console.log(student);
+        student.greeting = function(){
+            return("Hello, my name is "+ student.firstName);
+        };
+        student.aboutMe = function (){
+          return 'My full name is ' + student.firstName +' '+ student.lastName + ', I am' +' '+ student.age + ' years old and I am a student at' +' '+ student.school + '.';
+        };
+        student.askQuestion = function (question) {
+            student.questionList.push(question);
+            student.hasQuestion = true;
+            return "A question has been added to your list";
+        };
+        student.answerQuestion = function () {
+            if (student.hasQuestion === true){
+                student.hasQuestion = false;
+                return student.questionList[student.questionList.length - 1];
+            }
+                return "You have no pending questions"
+
+        };
+
+        console.log(student.greeting());
+        console.log(student.aboutMe());
+        console.log(student.answerQuestion());
+        console.log(student.askQuestion('Question 1'));
+        console.log(student.askQuestion('Question 2'));
+        console.log(student.askQuestion('Question 3'));
+        console.log(student.answerQuestion());
+
+        console.log("Here is my student object " + student);
+        console.log("Here is my student object", student);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
