@@ -1,0 +1,5 @@
+<main id="main_content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices mi non metus sollicitudin, vitae semper nibh posuere. Nunc tincidunt tincidunt justo quis ultrices. Mauris et urna dapibus, maximus felis eget, dictum tellus. Mauris vitae tincidunt justo. Integer non malesuada enim. In molestie neque sit amet odio imperdiet porttitor. Proin et erat diam. Suspendisse aliquet bibendum lorem. Aliquam posuere risus magna, id maximus metus facilisis tincidunt. Curabitur eget sollicitudin enim. Sed ornare metus commodo convallis commodo. Suspendisse laoreet dui eu pharetra elementum. Donec vitae lorem sed nunc euismod gravida a vel dui. Aenean pharetra eu mauris vel faucibus. Proin tristique consequat neque in gravida.
+
+    <img src="http://ndl.mgccw.com/mu3/app/20140218/19/1392731327919/sss/0_small.png">
+</main>
