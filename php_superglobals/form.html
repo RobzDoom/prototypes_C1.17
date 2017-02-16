@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+     $(document).ready(
+        function ajaxCall() {
+      $('button').click(function () {
+                  $.ajax({
+                      dataType: 'text',
+                      url: "index.php",
+                      type: "post",
+                      data: 'howdy',
+                      success: function(result) {
+                          console.log('This ajax call is successful', result);
+                      },
+                      error: function() {
+                          console.log('You are doing AJAX wrong!')
+                      }
+                 })
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <form action = "index.php" method="GET">
+        <input type="text" name="name" id="my_name">
+        <select name="gender">
+                  <option value="Male">Male</option>
+                  <option value="Male">Female</option>
+                  <option value="Male">Other</option>
+        </select>
+
+        <input type="text" name="fav_fruit[]" placeholder="favorite fruit">
+        <input type="text" name="fav_fruit[]" placeholder="favorite fruit">
+        <input type="text" name="fav_fruit[]" placeholder="favorite fruit">
+        <input class="button" type="submit">
+
+    </form>
+</body>
+</html>
+
+
+<!--for section 2 where do I check the difference.-->
+

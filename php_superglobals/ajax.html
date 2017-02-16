@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            function ajaxCall() {
+                $('button').click(function () {
+                    $.ajax({
+                        dataType: 'text',
+                        url: "index.php",
+                        method: "get",
+                        data: {
+                            textarea: $('textarea').val(),
+                            checkbox: $('input').val()
+                        },
+                        success: function(result) {
+                            console.log('This ajax call is successful', result);
+                        },
+                        error: function() {
+                            console.log('You are doing AJAX wrong!')
+                        }
+                    })
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <form method="post">
+        <input type="checkbox" value="howdy">
+        <textarea></textarea>
+        <button type="button">Click Me</button>
+    </form>
+
+</body>
+</html>
+
