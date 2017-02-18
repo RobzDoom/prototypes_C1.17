@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Angular DOM and Events</title>
+    <title>Angular Intro</title>
     <!-- Add Angular CDN below -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
-<body>
+<body ng-app>
+<div ng-init="trueVar = true" ng-init="counter = 0">
+    <span ng-hide ="trueVar">The button is enabled</span>
+    <span ng-show ="trueVar">The button is disabled</span>
+    <button ng-disabled ="trueVar" ng-click="counter = counter + 1">My Buttonz</button>
+    <input type="checkbox" ng-model = "trueVar">
+</div>
+
 
 </body>
 </html>
