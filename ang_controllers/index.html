@@ -13,6 +13,7 @@
     Last Name:<input type="text" ng-model="fc.form.lName">
     Email: <input type="text" ng-model="fc.form.email" placeholder="Type Email">
     <textarea ng-model="fc.form.comments" placeholder="Write Comment" ng-disabled="fc.characterLength()"></textarea>
+    <p>You have {{fc.maxLength - fc.form.comments.length}} letters left</p>
     <button ng-click="fc.addForm()">Add User</button><br/><br/>
 
     <table>
@@ -51,9 +52,9 @@
             self.form = {};
         };
         self.characterLength = function () {
-           var lenghtRemaining = self.maxLength - self.form.comments.length;
-           if (lenghtRemaining <= 0){
-           return lenghtRemaining;
+           var lengthRemaining = self.maxLength - self.form.comments.length;
+           if (lengthRemaining <= 0){
+           return true;
            }
         }
     });
